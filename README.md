@@ -1,2 +1,2 @@
 # Python Codes
-This repository contains all python codes that I made to study.
+This repository contains all python codes that I made to solve problems
