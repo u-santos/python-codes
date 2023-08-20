@@ -1,26 +1,18 @@
-def binary_search(list, item):
+def binary_search(ordened_list, searching):
     low = 0
-    high = len(list) -1
-
-    num_try = 0
+    high = len(ordened_list) - 1
+    
     while low <= high:
         mid = (low + high) / 2
         mid = int(mid)
-        guess = list[mid]
-
-        num_try += 1
-        print(f"Try number: {num_try}")
-        print(f"low: {low}\nhigh: {high}\nmid: {mid}\nguess: {guess}")
-        print("=============================")
-        if guess == item:
+        guess = ordened_list[mid]
+        
+        if guess == searching:
             return mid
-        if guess > item:
+        if guess > searching:
             high = mid - 1
         else:
             low = mid + 1
     return None
-
-my_list = list(range(0, 100000000))
-
-response = binary_search(my_list, 95)
-print(response)
+my_list = list(range(1,10))
+print(binary_search(my_list, 9))

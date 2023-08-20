@@ -1,0 +1,1 @@
+while IFS= read -r file; do aws s3 cp "s3://source/bucket/here/$file" "s3://dest/bucket/here" --acl bucket-owner-full-control; done < file.txt
